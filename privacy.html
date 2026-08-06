@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — PicMyPlate</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <p class="brand">PicMyPlate</p>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 27 July 2026</p>
+</header>
+
+<main>
+
+<p>PicMyPlate is a calorie and nutrition tracker for Android. This policy explains exactly what the app collects, where it goes, and how to get rid of it. It is written to be read, not to be survived.</p>
+
+<div class="note">
+  <p><strong>The short version.</strong> If you never create an account, everything you log stays on your phone and we hold nothing about you. If you do create an account, your logged data is copied to our server so you can restore it on another device. Photos you scan are sent to an AI provider to be identified. We do not sell your data and we do not use it for advertising.</p>
+</div>
+
+<h2>1. Who we are</h2>
+<p>PicMyPlate is operated by an individual developer based in India. For any privacy question, correction or data request, contact <a href="mailto:ashishbv11@gmail.com">ashishbv11@gmail.com</a>. We aim to respond within 30 days.</p>
+
+<h2>2. What the app collects</h2>
+
+<div class="wrap">
+<table>
+  <tr><th>Data</th><th>Why</th><th>Where it goes</th></tr>
+  <tr>
+    <td>Meals, calories and macros you log</td>
+    <td>To show your daily totals and history</td>
+    <td>Your device. Also our server if you sign in.</td>
+  </tr>
+  <tr>
+    <td>Weight entries and progress photos</td>
+    <td>To chart your progress</td>
+    <td>Your device. If signed in, photos go to a private storage folder only your account can read.</td>
+  </tr>
+  <tr>
+    <td>Profile: age, sex, height, weight, activity level, dietary preference</td>
+    <td>To calculate your calorie and macro targets</td>
+    <td>Your device. Also our server if you sign in.</td>
+  </tr>
+  <tr>
+    <td>Email address and password</td>
+    <td>Only if you create an account, so you can sign in again</td>
+    <td>Our authentication provider (Supabase). Passwords are stored hashed and are never visible to us.</td>
+  </tr>
+  <tr>
+    <td>Food photos you scan</td>
+    <td>To identify the food and estimate its nutrition</td>
+    <td>Sent to an AI provider. See section 4.</td>
+  </tr>
+  <tr>
+    <td>Exercise calories from Health Connect</td>
+    <td>Only if you switch it on, to add exercise back to your daily budget</td>
+    <td>Read on your device only. See section 5.</td>
+  </tr>
+  <tr>
+    <td>Nutrition corrections you make</td>
+    <td>To fix a wrong value, and to improve the value for everyone</td>
+    <td>Our server. See section 6.</td>
+  </tr>
+  <tr>
+    <td>Daily count of AI requests</td>
+    <td>To enforce fair-use limits and stop abuse</td>
+    <td>Our server. A per-day number only — never what you scanned.</td>
+  </tr>
+</table>
+</div>
+
+<h3>What the app does not collect</h3>
+<ul>
+  <li>No location data of any kind.</li>
+  <li>No contacts, call logs, messages or installed-app lists.</li>
+  <li>No advertising identifier, and no advertising or tracking SDKs are present in the app.</li>
+  <li>No analytics. Earlier versions of this app included an optional anonymous usage-statistics feature; it has been removed and the app now sends no analytics events at all.</li>
+</ul>
+
+<h2>3. Using the app without an account</h2>
+<p>An account is optional. Without one, meals, weights, photos, water and goals are held only in the app's local storage on your phone. Uninstalling the app deletes them. We cannot recover them for you, because we never had them.</p>
+<p>Signing in copies that data to our server so it survives a lost or replaced phone.</p>
+
+<h2>4. Food photos and AI</h2>
+<p>When you scan a meal, the photograph is sent to an AI provider to be identified — currently <strong>Google Gemini</strong>, with <strong>Groq</strong> as a fallback if Google is unavailable. The result comes straight back to you. The request is made through our own server so that our API keys are not exposed inside the app; the photo is not retained on our server after the response is returned.</p>
+
+<div class="note">
+  <p><strong>Please read this part.</strong> Once a photo reaches an AI provider it is governed by that provider's terms, not ours. Google states that content submitted through the free tier of its Gemini API may be used to improve its services, including review by human reviewers. Do not photograph anything you would not want a third party to see — documents, faces, screens or other people — and photograph the food only.</p>
+</div>
+
+<p>Provider terms: <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API</a> · <a href="https://groq.com/privacy-policy/">Groq</a>.</p>
+
+<h2>5. Health Connect</h2>
+<p>If you turn on "Add exercise calories", the app reads a single value from Android Health Connect: <strong>active calories burned</strong>, for the day you are viewing. This is used only to add that number to your daily calorie budget on your own screen.</p>
+<ul>
+  <li>This data is read on your device and used immediately. It is not uploaded to our server, not stored by us, and not shared with anyone.</li>
+  <li>It is never used for advertising, and never sold or transferred.</li>
+  <li>The app reads only. It never writes to Health Connect, and requests no other health data type.</li>
+  <li>You can revoke access at any time in the Health Connect app, or switch the feature off in PicMyPlate under Settings → Exercise. Revoking simply means no exercise calories are added.</li>
+</ul>
+<p>Our use of Health Connect complies with the <a href="https://support.google.com/googleplay/android-developer/answer/9888170">Google Play Health Apps policy</a>, including its restrictions on the use and transfer of health data.</p>
+
+<h2>6. Nutrition corrections are pooled</h2>
+<p>When you correct a food's nutrition values, that correction is stored against your account and also contributes to a shared, aggregated estimate for that dish. Once enough <em>different</em> people have corrected the same dish and broadly agree, the improved value is used for everyone. This is how the app gets better at regional foods that no database covers well.</p>
+<p>What is shared is the dish name and the corrected nutrition numbers, combined statistically with other people's. Your identity is not attached to the pooled value and it is not shown to other users.</p>
+
+<h2>7. Family sharing</h2>
+<p>Family groups are opt-in. If you create or join one using a share code, other members of that group can see the display name, calorie target, goal and dietary preference you chose for the group. They cannot see your meals, weights, photos, email address or profile details. You can leave a family at any time from Settings.</p>
+
+<h2>8. Subscriptions</h2>
+<p>Paid plans are billed by <strong>Google Play</strong>. We never see or handle your card, bank or payment details — Google does not share them with us. The app only asks Google whether an active subscription exists for the device's Play account, and unlocks features accordingly. Manage or cancel a subscription in the Play Store under Subscriptions.</p>
+
+<h2>9. Notifications</h2>
+<p>Reminders are optional and are generated on your device. Enabling them does not send anything to us.</p>
+
+<h2>10. Who we share data with</h2>
+<p>We do not sell personal data, and we do not share it for advertising. Data is shared only with the service providers needed to run the app:</p>
+<ul>
+  <li><strong>Supabase</strong> — accounts, database and photo storage.</li>
+  <li><strong>Google (Gemini)</strong> and <strong>Groq</strong> — food photo and text recognition, as described in section 4.</li>
+  <li><strong>Google Play</strong> — subscription billing.</li>
+</ul>
+<p>We may also disclose data where required by law.</p>
+
+<h2>11. How long we keep it</h2>
+<p>Data linked to an account is kept until you delete it or delete your account. Deleting your account removes your stored data from our systems, including progress photos. Backups may retain copies for up to 30 days before being overwritten. Pooled nutrition values described in section 6 are aggregated and cannot be traced back to you, so they are not removed.</p>
+
+<h2>12. Security</h2>
+<p>Traffic is encrypted in transit. Every database table uses row-level security so that your rows can only be read by your own account. Passwords are hashed by our authentication provider. No system is perfectly secure, and we cannot guarantee absolute security.</p>
+
+<h2>13. Your rights and how to delete your data</h2>
+<ul>
+  <li><strong>In the app:</strong> Settings → Account → Delete account &amp; data. This removes your account and its stored data permanently.</li>
+  <li><strong>Without the app:</strong> see the <a href="delete-account.html">account deletion page</a>.</li>
+  <li><strong>Access or correction:</strong> email <a href="mailto:ashishbv11@gmail.com">ashishbv11@gmail.com</a> and we will provide a copy of your stored data or correct it.</li>
+  <li><strong>Uninstalling</strong> removes everything held on the device.</li>
+</ul>
+<p>If you are in India, you have rights under the Digital Personal Data Protection Act, 2023. If you are in the EEA or UK, you have rights under the GDPR, including access, correction, erasure, portability and objection. Use the contact address above to exercise any of them.</p>
+
+<h2>14. Children</h2>
+<p>PicMyPlate is not intended for children under 13, and is not directed at them. Calorie targets are calculated with formulas intended for adults. If you believe a child has created an account, contact us and we will delete it.</p>
+
+<h2>15. Changes to this policy</h2>
+<p>If this policy changes materially, the date at the top will change and the updated version will be published at this address. Continuing to use the app after a change means you accept the updated policy.</p>
+
+<h2>16. Contact</h2>
+<p>Questions, data requests or complaints: <a href="mailto:ashishbv11@gmail.com">ashishbv11@gmail.com</a></p>
+
+</main>
+
+<footer>
+  <a href="privacy.html">Privacy</a>
+  <a href="terms.html">Terms</a>
+  <a href="delete-account.html">Delete account</a>
+</footer>
+</body>
+</html>
