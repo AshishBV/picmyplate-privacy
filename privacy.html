@@ -10,7 +10,7 @@
 <header>
   <p class="brand">PicMyPlate</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 27 July 2026</p>
+  <p class="updated">Last updated: 11 August 2026</p>
 </header>
 
 <main>
@@ -18,7 +18,7 @@
 <p>PicMyPlate is a calorie and nutrition tracker for Android. This policy explains exactly what the app collects, where it goes, and how to get rid of it. It is written to be read, not to be survived.</p>
 
 <div class="note">
-  <p><strong>The short version.</strong> If you never create an account, everything you log stays on your phone and we hold nothing about you. If you do create an account, your logged data is copied to our server so you can restore it on another device. Photos you scan are sent to an AI provider to be identified. We do not sell your data and we do not use it for advertising.</p>
+  <p><strong>The short version.</strong> If you never create an account, everything you log stays on your phone and we hold nothing about you. If you do create an account, your logged data is copied to our server so you can restore it on another device. Photos you scan are sent to an AI provider to be identified. If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other — but never your weight. We do not sell your data and we do not use it for advertising.</p>
 </div>
 
 <h2>1. Who we are</h2>
@@ -69,13 +69,43 @@
     <td>To enforce fair-use limits and stop abuse</td>
     <td>Our server. A per-day number only — never what you scanned.</td>
   </tr>
+  <tr>
+    <td>Messages you send in a family group</td>
+    <td>So your family can talk to each other</td>
+    <td>Our server, and the other members of that group. Deleted after 90 days. See section 7.</td>
+  </tr>
+  <tr>
+    <td>Your calorie total for the day, your calorie target and your logging streak</td>
+    <td>So your family can see how each other's day is going</td>
+    <td>Our server, and the other members of your family group. Only while you are in one. See section 7.</td>
+  </tr>
+  <tr>
+    <td>Reactions you leave on another member's day</td>
+    <td>So they can see who cheered them on</td>
+    <td>Our server, and the other members of that group.</td>
+  </tr>
+  <tr>
+    <td>Messages you report, and people you block</td>
+    <td>To act on abuse, and to stop showing you someone's messages</td>
+    <td>Our server. A reported message is copied so it survives being deleted. See section 7.</td>
+  </tr>
+  <tr>
+    <td>Crash reports</td>
+    <td>So a crash can be found and fixed</td>
+    <td>Our server. Sent on the next launch after a crash, with personal values stripped out. See section 12.</td>
+  </tr>
+  <tr>
+    <td>Your name and email address from Google</td>
+    <td>Only if you choose “Continue with Google”, so you can sign in</td>
+    <td>Our authentication provider (Supabase). We receive your name, email and profile picture URL, and nothing else from your Google account.</td>
+  </tr>
 </table>
 </div>
 
 <h3>What the app does not collect</h3>
 <ul>
   <li>No location data of any kind.</li>
-  <li>No contacts, call logs, messages or installed-app lists.</li>
+  <li>No contacts, call logs, installed-app lists, or any of your phone's own messages. (The app has its own family chat — that is described in section 7 — but it cannot see your SMS or any other messaging app.)</li>
   <li>No advertising identifier, and no advertising or tracking SDKs are present in the app.</li>
   <li>No analytics. Earlier versions of this app included an optional anonymous usage-statistics feature; it has been removed and the app now sends no analytics events at all.</li>
 </ul>
@@ -94,11 +124,17 @@
 <p>Provider terms: <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API</a> · <a href="https://groq.com/privacy-policy/">Groq</a>.</p>
 
 <h2>5. Health Connect</h2>
-<p>If you turn on "Add exercise calories", the app reads a single value from Android Health Connect: <strong>active calories burned</strong>, for the day you are viewing. This is used only to add that number to your daily calorie budget on your own screen.</p>
+<p>If you turn on "Add exercise calories", the app reads <strong>exercise and step data</strong> from Android Health Connect for the day you are viewing, so it can work out how much you have burned and add it to your daily calorie budget on your own screen. It reads four things:</p>
 <ul>
-  <li>This data is read on your device and used immediately. It is not uploaded to our server, not stored by us, and not shared with anyone.</li>
+  <li><strong>Active calories burned</strong></li>
+  <li><strong>Total calories burned</strong></li>
+  <li><strong>Steps</strong></li>
+  <li><strong>Distance</strong></li>
+</ul>
+<ul>
+  <li>This data is read on your device and used immediately. It is not uploaded to our server, not stored by us, and not shared with anyone — including the other members of a family group.</li>
   <li>It is never used for advertising, and never sold or transferred.</li>
-  <li>The app reads only. It never writes to Health Connect, and requests no other health data type.</li>
+  <li>The app reads only. It never writes to Health Connect.</li>
   <li>You can revoke access at any time in the Health Connect app, or switch the feature off in PicMyPlate under Settings → Exercise. Revoking simply means no exercise calories are added.</li>
 </ul>
 <p>Our use of Health Connect complies with the <a href="https://support.google.com/googleplay/android-developer/answer/9888170">Google Play Health Apps policy</a>, including its restrictions on the use and transfer of health data.</p>
@@ -107,8 +143,31 @@
 <p>When you correct a food's nutrition values, that correction is stored against your account and also contributes to a shared, aggregated estimate for that dish. Once enough <em>different</em> people have corrected the same dish and broadly agree, the improved value is used for everyone. This is how the app gets better at regional foods that no database covers well.</p>
 <p>What is shared is the dish name and the corrected nutrition numbers, combined statistically with other people's. Your identity is not attached to the pooled value and it is not shown to other users.</p>
 
-<h2>7. Family sharing</h2>
-<p>Family groups are opt-in. If you create or join one using a share code, other members of that group can see the display name, calorie target, goal and dietary preference you chose for the group. They cannot see your meals, weights, photos, email address or profile details. You can leave a family at any time from Settings.</p>
+<h2>7. Family groups, chat and shared progress</h2>
+<p>Family groups are opt-in. You are only in one if you created it or entered someone's share code, and you can leave at any time from Settings. Leaving stops all further sharing immediately.</p>
+
+<p><strong>What the other members of your group can see:</strong></p>
+<ul>
+  <li>The display name and emoji you chose for the group.</li>
+  <li>Your calorie target, your goal (lose, maintain or gain) and your dietary preference, so the shared meal plan can be portioned for each person.</li>
+  <li>Your calorie total for the day, whether it is within 10% of your target, and how many days in a row you have logged.</li>
+  <li>Anything you write in the group chat.</li>
+</ul>
+
+<p><strong>Your weight is never shared.</strong> Nor is anything else in this list: your individual meals, your food photos, your progress photos, your water intake, your email address, or anything read from Health Connect. None of it is sent to the group, and your weight is not stored on the family side of our database at all.</p>
+
+<p>This is not something you can partly opt out of. Being in a family group means sharing those numbers with the people in it. If you would rather not share them, do not join a group, or leave the one you are in.</p>
+
+<h3>Messages</h3>
+<p>Group messages are stored as ordinary text on our server, so that they reach the other members and so that we can look at one that somebody reports. They are <strong>not end-to-end encrypted</strong>: content nobody can read is content nobody can moderate.</p>
+<p><strong>Messages are deleted automatically 90 days after they are sent</strong>, whether or not anyone deletes them. You can delete your own at any time by holding a message. Leaving a group stops further sharing but does not retroactively remove messages you have already sent; those are covered by the 90-day rule.</p>
+
+<h3>Reporting and blocking</h3>
+<p>Hold any message to report it, or to block the person who sent it.</p>
+<ul>
+  <li><strong>Reporting</strong> sends us a copy of the message, who sent it, and the reason you chose. We keep that copy even if the message is later deleted — otherwise anyone reported could simply delete the evidence. We review reports and may remove content or suspend accounts.</li>
+  <li><strong>Blocking</strong> stops that person's messages from being sent to your device at all; it is enforced on our server, not hidden in the app. It is one-directional and private: they are not told, and they stay in the family group.</li>
+</ul>
 
 <h2>8. Subscriptions</h2>
 <p>Paid plans are billed by <strong>Google Play</strong>. We never see or handle your card, bank or payment details — Google does not share them with us. The app only asks Google whether an active subscription exists for the device's Play account, and unlocks features accordingly. Manage or cancel a subscription in the Play Store under Subscriptions.</p>
@@ -122,14 +181,18 @@
   <li><strong>Supabase</strong> — accounts, database and photo storage.</li>
   <li><strong>Google (Gemini)</strong> and <strong>Groq</strong> — food photo and text recognition, as described in section 4.</li>
   <li><strong>Google Play</strong> — subscription billing.</li>
+  <li><strong>Google Sign-In</strong> — only if you choose it, to verify who you are.</li>
 </ul>
+<p>Separately from service providers: if you are in a family group, the other members of that group see the things listed in section 7. That is sharing with other people rather than with a company, it happens only because you joined a group, and it stops when you leave.</p>
 <p>We may also disclose data where required by law.</p>
 
 <h2>11. How long we keep it</h2>
-<p>Data linked to an account is kept until you delete it or delete your account. Deleting your account removes your stored data from our systems, including progress photos. Backups may retain copies for up to 30 days before being overwritten. Pooled nutrition values described in section 6 are aggregated and cannot be traced back to you, so they are not removed.</p>
+<p>Data linked to an account is kept until you delete it or delete your account. Deleting your account removes your stored data from our systems, including progress photos, your family messages, your shared daily numbers and your reactions. Backups may retain copies for up to 30 days before being overwritten. Pooled nutrition values described in section 6 are aggregated and cannot be traced back to you, so they are not removed.</p>
+<p><strong>Family messages are deleted 90 days after they are sent</strong>, regardless of whether the account still exists. Reports are kept for as long as we need them to act on the account they concern.</p>
 
 <h2>12. Security</h2>
-<p>Traffic is encrypted in transit. Every database table uses row-level security so that your rows can only be read by your own account. Passwords are hashed by our authentication provider. No system is perfectly secure, and we cannot guarantee absolute security.</p>
+<p>Traffic is encrypted in transit. Every database table uses row-level security so that your rows can only be read by your own account, or — for a family group — by the members of that group. Passwords are hashed by our authentication provider. No system is perfectly secure, and we cannot guarantee absolute security.</p>
+<p><strong>Crash reports.</strong> If the app crashes, it saves a report on your device and uploads it the next time you open the app, so the fault can be found and fixed. A report contains the error, where in the code it happened, and the app and Android versions. Personal values are stripped before it is sent: no meals, no photos, no messages, no email address.</p>
 
 <h2>13. Your rights and how to delete your data</h2>
 <ul>
