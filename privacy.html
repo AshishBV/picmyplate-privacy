@@ -10,7 +10,7 @@
 <header>
   <p class="brand">PicMyPlate</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 12 August 2026</p>
+  <p class="updated">Last updated: 6 September 2026</p>
 </header>
 
 <main>
@@ -18,7 +18,7 @@
 <p>PicMyPlate is a calorie and nutrition tracker for Android. This policy explains exactly what the app collects, where it goes, and how to get rid of it. It is written to be read, not to be survived.</p>
 
 <div class="note">
-  <p><strong>The short version.</strong> If you never create an account, everything you log stays on your phone and we hold nothing about you. If you do create an account, your logged data is copied to our server so you can restore it on another device. Photos you scan are sent to an AI provider to be identified. If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other — but never your weight. We do not sell your data and we do not use it for advertising.</p>
+  <p><strong>The short version.</strong> If you never create an account, everything you log stays on your phone and we hold nothing about you. If you do create an account, your logged data is copied to our server so you can restore it on another device. Photos you scan are sent to an AI provider to be identified, and so are the names of the dishes you log when you open the AI Insights screen. If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other — but never your weight. We do not sell your data and we do not use it for advertising.</p>
 </div>
 
 <h2>1. Who we are</h2>
@@ -32,7 +32,7 @@
   <tr>
     <td>Meals, calories and macros you log</td>
     <td>To show your daily totals and history</td>
-    <td>Your device. Also our server if you sign in.</td>
+    <td>Your device. Also our server if you sign in. The <em>names</em> of your dishes are also sent to an AI provider when you open AI Insights &mdash; see section 4.</td>
   </tr>
   <tr>
     <td>Weight entries and progress photos</td>
@@ -57,6 +57,11 @@
   <tr>
     <td>Exercise calories from Health Connect</td>
     <td>Only if you switch it on, to add exercise back to your daily budget</td>
+    <td>Read on your device only. See section 5.</td>
+  </tr>
+  <tr>
+    <td>Sleep from Health Connect</td>
+    <td>Only if you switch it on, to show last night on the Progress screen</td>
     <td>Read on your device only. See section 5.</td>
   </tr>
   <tr>
@@ -124,6 +129,14 @@
 <h2>4. Food photos and AI</h2>
 <p>When you scan a meal, the photograph is sent to an AI provider to be identified — currently <strong>Google Gemini</strong>, with <strong>Groq</strong> as a fallback if Google is unavailable. The result comes straight back to you. The request is made through our own server so that our API keys are not exposed inside the app; the photo is not retained on our server after the response is returned.</p>
 
+<h3>Dish names, on the AI Insights screen</h3>
+<p>Photos are not the only thing that goes to an AI provider, and this is the other one. When you open <strong>AI Insights</strong>, the app sends the <strong>names of dishes you have logged</strong> — up to fifty of them, each with the hour of day it was eaten — to the same provider, and asks which meal of the day each one belongs to. It is what lets the screen say how many of your days have a breakfast, a lunch or a dinner recorded.</p>
+<p>What is sent is only the dish name and an hour, for example <em>"Paneer tikka"</em> at 20. <strong>No calories, no macros, no photographs, no weight, no dates, and nothing that identifies you</strong> — not your name, your email or your account id. The answer is kept on your phone for a day so that opening the screen again does not send anything.</p>
+<p>The same caution as above applies, for the same reason: once a dish name reaches an AI provider it is governed by that provider's terms, not ours. If you would rather this did not happen, do not open the AI Insights screen — nothing else in the app sends it.</p>
+
+<h3>Text you type</h3>
+<p>Photos and dish names are not the only things that reach the provider. Any <strong>text you type</strong> that asks the app to look something up goes the same way: the food description you write instead of scanning, the dish name you ask for nutrition on, and the preferences you set when you generate a meal plan or a recipe. It is sent to answer that request, and the answer comes straight back to you. As with a photograph, do not type anything into those boxes that you would not want a third party to read.</p>
+
 <div class="note">
   <p><strong>Please read this part.</strong> Once a photo reaches an AI provider it is governed by that provider's terms, not ours. Google states that content submitted through the free tier of its Gemini API may be used to improve its services, including review by human reviewers. Do not photograph anything you would not want a third party to see — documents, faces, screens or other people — and photograph the food only.</p>
 </div>
@@ -131,12 +144,14 @@
 <p>Provider terms: <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API</a> · <a href="https://groq.com/privacy-policy/">Groq</a>.</p>
 
 <h2>5. Health Connect</h2>
-<p>If you turn on "Add exercise calories", the app reads <strong>exercise and step data</strong> from Android Health Connect for the day you are viewing, so it can work out how much you have burned and add it to your daily calorie budget on your own screen. It reads four things:</p>
+<p>If you turn on "Add exercise calories", the app reads <strong>exercise and step data</strong> from Android Health Connect for the day you are viewing, so it can work out how much you have burned and add it to your daily calorie budget on your own screen. The same data is shown back to you on the Progress screen as your steps, your exercise minutes and your active days. It reads six things:</p>
 <ul>
   <li><strong>Active calories burned</strong></li>
   <li><strong>Total calories burned</strong></li>
   <li><strong>Steps</strong></li>
   <li><strong>Distance</strong></li>
+  <li><strong>Exercise sessions</strong> — the start time, end time and activity type of workouts other apps have recorded</li>
+  <li><strong>Sleep sessions</strong> — the start time and end time of sleep other apps or a watch have recorded, and where those records include them, the sleep stages within a night (deep, light, REM and time awake)</li>
 </ul>
 <ul>
   <li>This data is read on your device and used immediately. It is not uploaded to our server, not stored by us, and not shared with anyone — including the other members of a family group.</li>
