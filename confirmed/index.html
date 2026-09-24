@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Email confirmed · PicMyPlate</title>
+<meta name="description" content="Your PicMyPlate email address is confirmed. Go back to the app and sign in.">
+<!-- WHERE THE "CONFIRM YOUR EMAIL" LINK LANDS.
+     Supabase confirms the address first and then sends the browser here
+     (config.emailConfirmedUrl in the app). Before this page existed the
+     project's Site URL was the default http://localhost:3000, so a tester
+     tapped the link in her inbox and got "localhost refused to connect" - on a
+     confirmation that had in fact worked.
+
+     The address bar can arrive carrying a sign-in token in its #fragment. It
+     is never read beyond the error fields, never sent anywhere (this page makes
+     no requests at all), and is wiped from the address bar before anything is
+     shown, so a screenshot or a shared link cannot carry it. -->
+<link rel="stylesheet" href="../style.css">
+<style>
+  .state { display: none; }
+  .state.on { display: block; }
+  .open {
+    display: inline-block;
+    margin: 8px 0 18px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  .open:hover { color: #fff; background: #d1420c; }
+  .android-only { display: none; }
+  .android .android-only { display: block; }
+</style>
+</head>
+<body>
+<header>
+  <p class="brand">PicMyPlate</p>
+  <h1 id="title">Email confirmed</h1>
+  <p class="updated" id="lede">Your account is ready.</p>
+</header>
+
+<main>
+  <div class="state on" id="ok">
+    <p>Go back to PicMyPlate and sign in with the email and password you just used.</p>
+  </div>
+
+  <div class="state" id="expired">
+    <div class="note">
+      <p><strong>This link has expired or was already used.</strong></p>
+      <p>If you confirmed your email earlier, you are all set - just sign in. If not, open the app, try signing in, and use the newest email we sent you.</p>
+    </div>
+  </div>
+
+  <div class="android-only">
+    <p><a class="open" href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.ashishbv.fitai;end">Open PicMyPlate</a></p>
+  </div>
+
+  <p>Trouble signing in? Write to <a href="mailto:support@picmyplate.app">support@picmyplate.app</a>.</p>
+</main>
+
+<footer>
+  <a href="../privacy.html">Privacy</a>
+  <a href="../terms.html">Terms</a>
+</footer>
+
+<script>
+  (function () {
+    // Read what Supabase appended - the error fields only - then clear the
+    // address bar before anything else happens.
+    var raw = (location.hash || '').replace(/^#/, '') + '&' + (location.search || '').replace(/^\?/, '');
+    var params = {};
+    raw.split('&').forEach(function (pair) {
+      var i = pair.indexOf('=');
+      if (i > 0) params[pair.slice(0, i)] = pair.slice(i + 1);
+    });
+    if (location.hash || location.search) {
+      try { history.replaceState(null, '', location.pathname); } catch (e) { /* old browser: harmless */ }
+    }
+
+    if (params.error || params.error_code) {
+      document.getElementById('ok').className = 'state';
+      document.getElementById('expired').className = 'state on';
+      document.getElementById('title').textContent = 'Link not valid';
+      document.getElementById('lede').textContent = 'Nothing is wrong with your account.';
+    }
+
+    // The button opens the installed app by its package, which only an
+    // Android browser understands.
+    if (/Android/i.test(navigator.userAgent)) document.body.className += ' android';
+  })();
+</script>
+</body>
+</html>
