@@ -10,7 +10,7 @@
 <header>
   <p class="brand">PicMyPlate</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 6 September 2026</p>
+  <p class="updated">Last updated: 6 October 2026</p>
 </header>
 
 <main>
@@ -18,7 +18,7 @@
 <p>PicMyPlate is a calorie and nutrition tracker for Android. This policy explains exactly what the app collects, where it goes, and how to get rid of it. It is written to be read, not to be survived.</p>
 
 <div class="note">
-  <p><strong>The short version.</strong> If you never create an account, everything you log stays on your phone and we hold nothing about you. If you do create an account, your logged data is copied to our server so you can restore it on another device. Photos you scan are sent to an AI provider to be identified, and so are the names of the dishes you log when you open the AI Insights screen. If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other — but never your weight. We do not sell your data and we do not use it for advertising.</p>
+  <p><strong>The short version.</strong> You need an account to use PicMyPlate. What you log &mdash; meals and their photos, weights, progress photos, your profile and goals &mdash; is kept on your phone and copied to our server so it survives a lost phone. Photos you scan, voice clips you record, and some of what you type or have logged, are sent to an AI provider to be analysed; a voice clip is never kept. If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other &mdash; but never your weight. Health Connect data is read on your phone and never uploaded, except smart-scale weigh-ins, which join your weight log and are backed up with it. The Premium blood sugar log &mdash; readings, medicines and their reminders &mdash; stays on your phone and is never uploaded. We do not sell your data and we do not use it for advertising.</p>
 </div>
 
 <h2>1. Who we are</h2>
@@ -32,36 +32,81 @@
   <tr>
     <td>Meals, calories and macros you log</td>
     <td>To show your daily totals and history</td>
-    <td>Your device. Also our server if you sign in. The <em>names</em> of your dishes are also sent to an AI provider when you open AI Insights &mdash; see section 4.</td>
+    <td>Your device and our server. The <em>names</em> of your dishes are also sent to an AI provider when you open AI Insights &mdash; see section 4.</td>
   </tr>
   <tr>
-    <td>Weight entries and progress photos</td>
+    <td>Photos attached to meals you log</td>
+    <td>So a meal keeps its picture on every device you sign in on</td>
+    <td>A private storage folder only your account can read. See section 11 for when it is removed.</td>
+  </tr>
+  <tr>
+    <td>Weight entries, notes you add to them, and progress photos</td>
     <td>To chart your progress</td>
-    <td>Your device. If signed in, photos go to a private storage folder only your account can read.</td>
+    <td>Your device and our server; photos go to a private storage folder only your account can read. Your current and target weight are also sent to an AI provider when you generate a meal plan &mdash; see section 4.</td>
   </tr>
   <tr>
-    <td>Profile: age, sex, height, weight, activity level, dietary preference</td>
+    <td>Profile: name, age, sex, height, current and target weight, goal and pace, activity level, dietary preference, units, and the answers you give in setup about what you want to achieve and what has stopped you before</td>
     <td>To calculate your calorie and macro targets</td>
-    <td>Your device. Also our server if you sign in.</td>
+    <td>Your device and our server.</td>
+  </tr>
+  <tr>
+    <td>Calorie and macro goals, and custom foods you create</td>
+    <td>To track against your targets, and so you can log your own foods again</td>
+    <td>Your device and our server.</td>
+  </tr>
+  <tr>
+    <td>Water, fasting and exercise you log by hand, and your Quick-add favourites</td>
+    <td>To show them back to you</td>
+    <td>Your device only. They are not copied to our server, so signing out or uninstalling removes them.</td>
+  </tr>
+  <tr>
+    <td>Blood sugar log (Premium): readings, HbA1c results, medicines and the doses you tick as taken, and your settings for them, including the type of diabetes you choose</td>
+    <td>Only if you use it, to chart your readings and to remind you</td>
+    <td>Your device only. They are not copied to our server, sent to an AI provider or shared with a family group; signing out or uninstalling removes them. See &ldquo;Blood sugar log (Premium)&rdquo; below.</td>
   </tr>
   <tr>
     <td>Email address and password</td>
-    <td>Only if you create an account, so you can sign in again</td>
-    <td>Our authentication provider (Supabase). Passwords are stored hashed and are never visible to us.</td>
+    <td>So you can sign in again</td>
+    <td>Our authentication provider (Supabase). Passwords are stored hashed and are never visible to us. Account emails &mdash; confirmation codes, password resets and security notices &mdash; are sent through our email provider, Brevo.</td>
   </tr>
   <tr>
-    <td>Food photos you scan</td>
-    <td>To identify the food and estimate its nutrition</td>
-    <td>Sent to an AI provider. See section 4.</td>
+    <td>Food, nutrition-label and ingredient photos you scan</td>
+    <td>To identify the food, read a label, or plan meals from what you have</td>
+    <td>Sent to an AI provider. See section 4. A photo you log with a meal is kept as described above.</td>
   </tr>
   <tr>
-    <td>Exercise calories from Health Connect</td>
-    <td>Only if you switch it on, to add exercise back to your daily budget</td>
+    <td>Voice clips you record</td>
+    <td>Only if you tap the microphone, to turn what you say into text in the Describe Meal or Search food box</td>
+    <td>Sent through our server to an AI provider to be transcribed. Not kept by us, and deleted from your phone once sent. See section 4.</td>
+  </tr>
+  <tr>
+    <td>Barcode numbers you scan, and words you search for</td>
+    <td>To look up a packaged product, by its barcode or by name in Search food</td>
+    <td>Sent from your phone to Open Food Facts, a public food database. Only the number, or the words you typed, is sent — nothing about you or your account.</td>
+  </tr>
+  <tr>
+    <td>A device identifier</td>
+    <td>To count the scans a phone has used, so reinstalling the app cannot reset the count</td>
+    <td>Android's app-specific device ID is sent to our server with each scan. The server keeps only a one-way hash of it, with when it was first and last seen. It is not an advertising ID and is not stored against your account.</td>
+  </tr>
+  <tr>
+    <td>Which plan you are on</td>
+    <td>Sent along with each scan. Our server does not rely on it: it works out your plan from your subscription record (next row)</td>
+    <td>Sent to our server with each scan.</td>
+  </tr>
+  <tr>
+    <td>Your subscription record: plan, product, purchase token and the date the subscription runs until</td>
+    <td>Only if you subscribe, so our server knows which plan your account is on, and so one purchase belongs to only one account</td>
+    <td>Our server, against your account, written from Google Play's own answer about the purchase. Deleted with your account. See section 8.</td>
+  </tr>
+  <tr>
+    <td>Exercise, steps and calories burned from Health Connect</td>
+    <td>Only if you connect Health Connect, to show your activity and, if you choose, add exercise back to your daily budget</td>
     <td>Read on your device only. See section 5.</td>
   </tr>
   <tr>
     <td>Sleep from Health Connect</td>
-    <td>Only if you switch it on, to show last night on the Progress screen</td>
+    <td>Only if you connect Health Connect, to show last night on the Progress screen</td>
     <td>Read on your device only. See section 5.</td>
   </tr>
   <tr>
@@ -72,7 +117,7 @@
   <tr>
     <td>Daily count of AI requests</td>
     <td>To enforce fair-use limits and stop abuse</td>
-    <td>Our server. A per-day number only — never what you scanned.</td>
+    <td>Our server. A per-day number only — never what you scanned or said.</td>
   </tr>
   <tr>
     <td>Messages you send in a family group</td>
@@ -95,7 +140,7 @@
     <td>Our server. A reported message is copied so it survives being deleted. See section 7.</td>
   </tr>
   <tr>
-    <td>A profile photo, if you choose one</td>
+    <td>A family profile photo, if you choose one</td>
     <td>So your family can tell each other apart at a glance</td>
     <td>A private storage folder. Readable only by people who are in a family
         with you at the time they look, and by nobody else — not the public
@@ -104,7 +149,7 @@
   <tr>
     <td>Crash reports</td>
     <td>So a crash can be found and fixed</td>
-    <td>Our server. Sent on the next launch after a crash, with personal values stripped out. See section 12.</td>
+    <td>Our server, linked to your account. Sent on the next launch after a crash, with personal values stripped out. See section 12.</td>
   </tr>
   <tr>
     <td>Your name and email address from Google</td>
@@ -114,37 +159,50 @@
 </table>
 </div>
 
+<h3>Blood sugar log (Premium)</h3>
+<p>The blood sugar log is a Premium feature, and what goes into it stays <strong>on your phone</strong>: the readings you enter, the HbA1c results you type in from a lab report, your medicines (a name, the times, and whether it is insulin) with the doses you tick as taken, and your settings for them. The type of diabetes you can pick in setup &mdash; an optional question, asked on every plan &mdash; is kept the same way. None of it is copied to our server, sent to an AI provider or shared with a family group. We hold no copy, so we cannot see, restore or export it for you. Signing out or deleting your account erases it from the phone and cancels its reminders.</p>
+<p>You can switch on three reminders: a daily fasting check, one two hours after a meal you log, and one at each time you set for a medicine. They are scheduled on your phone and send nothing to us. The app asks Android to keep their text hidden on the lock screen until you unlock the phone; their title is only &ldquo;Reminder&rdquo;, and a medicine reminder's text does name the medicine.</p>
+<p>The log records and charts what you enter. It does not diagnose or treat diabetes, give dosing advice or replace your doctor &mdash; see the <a href="terms.html">Terms</a>.</p>
+
 <h3>What the app does not collect</h3>
 <ul>
-  <li>No location data of any kind.</li>
+  <li>No location data of any kind. (The app tailors food to a country &mdash; the one you choose, or, until you do, the one your phone's time zone or language setting suggests. It never reads GPS or network location.)</li>
   <li>No contacts, call logs, installed-app lists, or any of your phone's own messages. (The app has its own family chat — that is described in section 7 — but it cannot see your SMS or any other messaging app.)</li>
   <li>No advertising identifier, and no advertising or tracking SDKs are present in the app.</li>
-  <li>No analytics. Earlier versions of this app included an optional anonymous usage-statistics feature; it has been removed and the app now sends no analytics events at all.</li>
+  <li>No usage analytics. The app sends no analytics events or usage statistics of any kind. The only diagnostic data it sends is the crash reports described in section 12.</li>
 </ul>
 
-<h2>3. Using the app without an account</h2>
-<p>An account is optional. Without one, meals, weights, photos, water and goals are held only in the app's local storage on your phone. Uninstalling the app deletes them. We cannot recover them for you, because we never had them.</p>
-<p>Signing in copies that data to our server so it survives a lost or replaced phone.</p>
+<h2>3. Your account</h2>
+<p>An account is required. Sign up with an email address and password, or with Google. Everything you log is saved on your phone first, so the app keeps working offline, and is copied to our server whenever you are online so it survives a lost or replaced phone.</p>
+<p>Signing out removes your account's data from the phone. What was copied to our server stays there until you delete it or delete your account; water, fasting, hand-logged exercise, Quick-add favourites and the blood sugar log are never copied, so signing out removes them for good.</p>
 
 <h2>4. Food photos and AI</h2>
-<p>When you scan a meal, the photograph is sent to an AI provider to be identified — currently <strong>Google Gemini</strong>, with <strong>Groq</strong> as a fallback if Google is unavailable. The result comes straight back to you. The request is made through our own server so that our API keys are not exposed inside the app; the photo is not retained on our server after the response is returned.</p>
+<p>When you scan a meal, a nutrition label or the ingredients you have, the photograph is sent through our own server to an AI provider to be analysed. The request goes through our server so that our API keys are not exposed inside the app. We use several providers so the app keeps working when one is unavailable, and which one answers can change from request to request: <strong>Groq</strong>, <strong>Google</strong> (the Gemini API), <strong>Cerebras</strong> (text only) and <strong>OpenRouter</strong>, which passes the request on to the maker of the model it uses &mdash; currently Google or OpenAI. The result comes straight back to you. Our server does not keep a scanned photo once the answer is returned; if you log the meal, its photo is saved with it (section 2).</p>
+<p>To make a meal scan more accurate, the request also carries your country (see "What the app does not collect") and up to six dishes you corrected before, with the calories you gave them.</p>
 
 <h3>Dish names, on the AI Insights screen</h3>
-<p>Photos are not the only thing that goes to an AI provider, and this is the other one. When you open <strong>AI Insights</strong>, the app sends the <strong>names of dishes you have logged</strong> — up to fifty of them, each with the hour of day it was eaten — to the same provider, and asks which meal of the day each one belongs to. It is what lets the screen say how many of your days have a breakfast, a lunch or a dinner recorded.</p>
-<p>What is sent is only the dish name and an hour, for example <em>"Paneer tikka"</em> at 20. <strong>No calories, no macros, no photographs, no weight, no dates, and nothing that identifies you</strong> — not your name, your email or your account id. The answer is kept on your phone for a day so that opening the screen again does not send anything.</p>
-<p>The same caution as above applies, for the same reason: once a dish name reaches an AI provider it is governed by that provider's terms, not ours. If you would rather this did not happen, do not open the AI Insights screen — nothing else in the app sends it.</p>
+<p>Photos are not the only thing that goes to an AI provider, and this is the other one. When you open <strong>AI Insights</strong> and have logged at least six meals, the app sends the <strong>names of dishes you have logged</strong> — up to fifty entries, each a dish name with the hour of day it was eaten — through our server to the same providers, and asks which meal of the day each one belongs to. It is what lets the screen say how many of your days have a breakfast, a lunch or a dinner recorded.</p>
+<p>What is sent is only the dish name and an hour, for example <em>"Paneer tikka"</em> at 20. <strong>No calories, no macros, no photographs, no weight, no dates, and nothing that identifies you</strong> — not your name, your email or your account id. The answer is held only in the app's memory, for up to a day, so opening the screen again does not send it again; if the app has been closed, or you have logged a new dish, the next visit sends it again.</p>
+<p>The same caution as above applies, for the same reason: once a dish name reaches an AI provider it is governed by that provider's terms, not ours. If you would rather this did not happen, do not open the AI Insights screen — it is the only place that sends this list.</p>
 
-<h3>Text you type</h3>
-<p>Photos and dish names are not the only things that reach the provider. Any <strong>text you type</strong> that asks the app to look something up goes the same way: the food description you write instead of scanning, the dish name you ask for nutrition on, and the preferences you set when you generate a meal plan or a recipe. It is sent to answer that request, and the answer comes straight back to you. As with a photograph, do not type anything into those boxes that you would not want a third party to read.</p>
+<h3>Text you type, meal plans and recipes</h3>
+<p>Photos and dish names are not the only things that reach the provider. Any <strong>text you type</strong> that asks the app to look something up goes the same way: the food description you write instead of scanning, and the dish name you ask for nutrition on. It is sent to answer that request, and the answer comes straight back to you. As with a photograph, do not type anything into those boxes that you would not want a third party to read.</p>
+<p>When you generate a <strong>meal plan</strong>, the request carries what the plan has to fit: your goal, your calorie, protein, carbohydrate and fat targets, your <strong>current and target weight</strong>, your dietary preference (in a family, the strictest one in the group), your country, the ingredients you entered if you asked to cook from what you have, and the names of dishes recent plans used so they are not repeated. A <strong>recipe</strong> request carries the dish, your dietary preference, goal and country, and the calories and protein it should come to. Neither carries your name, your email or your account id.</p>
+<p>A dish you ask nutrition for may first be looked up in the <strong>USDA FoodData Central</strong> database. A dish's name may be used to find a stock photo on <strong>Pexels</strong> or <strong>Unsplash</strong> (through our server) or on <strong>TheMealDB</strong> (asked directly by your phone); the picture is then loaded from that service.</p>
+
+<h3>Voice input and the microphone</h3>
+<p>In <strong>Describe Meal</strong> and <strong>Search food</strong> you can tap the microphone and say what you ate instead of typing it. The app asks for Android's <strong>microphone permission</strong> the first time, and uses the microphone only while you have asked it to listen: from your tap until you tap again, 15 seconds at most. It stops as soon as you leave the screen or switch to another app.</p>
+<p>The recording &mdash; a <strong>voice clip</strong> of a few seconds &mdash; is sent through our server to be <strong>transcribed</strong> into text by <strong>Groq</strong> (its Whisper speech model), or by <strong>Google</strong> (the Gemini API) if Groq is unavailable. The text comes back into the box, where you can change it before anything is estimated or logged. The clip is <strong>not stored</strong> by us &mdash; not on our server and not in our logs &mdash; and it is deleted from your phone once it has been sent. We keep only a daily count of voice requests, to enforce a fair-use limit.</p>
+<p>As with a photo, once a clip reaches the provider it is governed by that provider's terms, not ours, so say only what you ate. If you would rather not use voice, type instead, or refuse or revoke the microphone permission in your phone's settings; nothing else in the app uses the microphone.</p>
 
 <div class="note">
-  <p><strong>Please read this part.</strong> Once a photo reaches an AI provider it is governed by that provider's terms, not ours. Google states that content submitted through the free tier of its Gemini API may be used to improve its services, including review by human reviewers. Do not photograph anything you would not want a third party to see — documents, faces, screens or other people — and photograph the food only.</p>
+  <p><strong>Please read this part.</strong> Once a photo or a voice clip reaches an AI provider it is governed by that provider's terms, not ours. Google states that content submitted through the free tier of its Gemini API may be used to improve its services, including review by human reviewers &mdash; and Gemini is also the fallback that transcribes a voice clip when Groq is unavailable. Do not photograph anything you would not want a third party to see — documents, faces, screens or other people — and photograph the food only. In a voice clip, say only what you ate.</p>
 </div>
 
-<p>Provider terms: <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API</a> · <a href="https://groq.com/privacy-policy/">Groq</a>.</p>
+<p>Provider terms: <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API</a> · <a href="https://groq.com/privacy-policy/">Groq</a> · <a href="https://www.cerebras.ai/privacy-policy">Cerebras</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a>.</p>
 
 <h2>5. Health Connect</h2>
-<p>If you turn on "Add exercise calories", the app reads <strong>exercise and step data</strong> from Android Health Connect for the day you are viewing, so it can work out how much you have burned and add it to your daily calorie budget on your own screen. The same data is shown back to you on the Progress screen as your steps, your exercise minutes and your active days. It reads six things:</p>
+<p>If you connect Health Connect (Settings → Exercise calories → Connect Health Connect, or when the app asks during setup) and allow access, the app reads the data below from Android Health Connect for the days you view. Your steps, exercise and sleep are shown back to you on the Progress screen, and if you also switch on "Add exercise calories", the calories you burned are added to that day's calorie budget on your own screen. Weigh-ins from a smart scale are added to your weight log. It reads seven things:</p>
 <ul>
   <li><strong>Active calories burned</strong></li>
   <li><strong>Total calories burned</strong></li>
@@ -152,28 +210,30 @@
   <li><strong>Distance</strong></li>
   <li><strong>Exercise sessions</strong> — the start time, end time and activity type of workouts other apps have recorded</li>
   <li><strong>Sleep sessions</strong> — the start time and end time of sleep other apps or a watch have recorded, and where those records include them, the sleep stages within a night (deep, light, REM and time awake)</li>
+  <li><strong>Weight</strong> — weigh-ins a smart scale or another app has recorded. The app asks for the last 90 days, but Health Connect only shares data from about 30 days before you first allowed access unless an app also holds its separate history permission, which PicMyPlate does not request — so a recent connection may bring in less than 90 days. The first weigh-in of each day is added to your weight log, marked with the app it came from. A weight you typed yourself for that day is kept and never replaced.</li>
 </ul>
 <ul>
-  <li>This data is read on your device and used immediately. It is not uploaded to our server, not stored by us, and not shared with anyone — including the other members of a family group.</li>
+  <li>Everything except weight is read on your device and used immediately. It is not uploaded to our server, not stored by us, and not shared with anyone — including the other members of a family group.</li>
+  <li>An imported weigh-in becomes an entry in your weight log, and is stored like a weight you typed: on your device and on our server with the rest of your log, so it survives a lost phone (see section 2). Like every weight, it is never shared with a family group. Deleting your account deletes it.</li>
   <li>It is never used for advertising, and never sold or transferred.</li>
   <li>The app reads only. It never writes to Health Connect.</li>
-  <li>You can revoke access at any time in the Health Connect app, or switch the feature off in PicMyPlate under Settings → Exercise. Revoking simply means no exercise calories are added.</li>
+  <li>You can revoke access at any time in the Health Connect app, which stops all seven. Weigh-ins already added to your log stay there, as entries you can type over. Switching off "Add exercise calories" in PicMyPlate only stops burned calories being added to your budget.</li>
 </ul>
 <p>Our use of Health Connect complies with the <a href="https://support.google.com/googleplay/android-developer/answer/9888170">Google Play Health Apps policy</a>, including its restrictions on the use and transfer of health data.</p>
 
 <h2>6. Nutrition corrections are pooled</h2>
 <p>When you correct a food's nutrition values, that correction is stored against your account and also contributes to a shared, aggregated estimate for that dish. Once enough <em>different</em> people have corrected the same dish and broadly agree, the improved value is used for everyone. This is how the app gets better at regional foods that no database covers well.</p>
-<p>What is shared is the dish name and the corrected nutrition numbers, combined statistically with other people's. Your identity is not attached to the pooled value and it is not shown to other users.</p>
+<p>What is shared is the dish name and the corrected nutrition numbers, combined statistically with other people's. Your identity is not attached to the pooled value and it is not shown to other users. The pooled value is recalculated from the individual corrections each time it is used, so deleting your account removes your contribution.</p>
 
 <h2>7. Family groups, chat and shared progress</h2>
-<p>Family groups are opt-in. You are only in one if you created it or entered someone's share code, and you can leave at any time from Settings. Leaving stops all further sharing immediately.</p>
+<p>Family groups are opt-in. You are only in one if you created it or entered someone's share code, and you can leave at any time. Leaving stops all further sharing immediately.</p>
 
 <p><strong>What the other members of your group can see:</strong></p>
 <ul>
   <li>The display name and the emoji <em>or profile photo</em> you chose for the group.</li>
-  <li>Your calorie target, your goal (lose, maintain or gain) and your dietary preference, so the shared meal plan can be portioned for each person.</li>
+  <li>Your calorie target, your goal (lose, maintain or gain), your dietary preference and how many meals a day you eat, so the shared meal plan can be portioned for each person.</li>
   <li>Your calorie total for the day, whether it is within 10% of your target, and how many days in a row you have logged.</li>
-  <li>Anything you write in the group chat.</li>
+  <li>Reactions you leave on their day, and anything you write in the group chat.</li>
 </ul>
 
 <p><strong>Your weight is never shared.</strong> Nor is anything else in this list: your individual meals, your food photos, your progress photos, your water intake, your email address, or anything read from Health Connect. None of it is sent to the group, and your weight is not stored on the family side of our database at all.</p>
@@ -185,53 +245,64 @@
 <strong>private</strong> folder, not a public one: it has no address anyone can
 open, and it is served through a temporary link that is issued only to someone
 who is in a family with you <em>at the moment they load it</em>. Leave the group
-and the picture stops resolving for them — there is no permanent URL still in
-circulation.</p>
+and no new link is issued to them; a link they already hold stops working within
+12 hours. There is no permanent URL in circulation.</p>
 <p>Replacing your picture deletes the previous one. Choosing an emoji instead
-removes the photo entirely. We never look at these pictures, and they are not
-sent to the AI provider — only food photos you scan are.</p>
+removes the photo entirely. We never look at these pictures, and they are never
+sent to an AI provider.</p>
 
 <h3>Messages</h3>
 <p>Group messages are stored as ordinary text on our server, so that they reach the other members and so that we can look at one that somebody reports. They are <strong>not end-to-end encrypted</strong>: content nobody can read is content nobody can moderate.</p>
 <p><strong>Messages are deleted automatically 90 days after they are sent</strong>, whether or not anyone deletes them. You can delete your own at any time by holding a message. Leaving a group stops further sharing but does not retroactively remove messages you have already sent; those are covered by the 90-day rule.</p>
 
 <h3>Reporting and blocking</h3>
-<p>Hold any message to report it, or to block the person who sent it.</p>
+<p>Hold someone else's message to report it, or to block the person who sent it.</p>
 <ul>
   <li><strong>Reporting</strong> sends us a copy of the message, who sent it, and the reason you chose. We keep that copy even if the message is later deleted — otherwise anyone reported could simply delete the evidence. We review reports and may remove content or suspend accounts.</li>
   <li><strong>Blocking</strong> stops that person's messages from being sent to your device at all; it is enforced on our server, not hidden in the app. It is one-directional and private: they are not told, and they stay in the family group.</li>
 </ul>
 
 <h2>8. Subscriptions</h2>
-<p>Paid plans are billed by <strong>Google Play</strong>. We never see or handle your card, bank or payment details — Google does not share them with us. The app only asks Google whether an active subscription exists for the device's Play account, and unlocks features accordingly. Manage or cancel a subscription in the Play Store under Subscriptions.</p>
+<p>Paid plans are billed by <strong>Google Play</strong>. We never see or handle your card, bank or payment details — Google does not share them with us. The app asks Google Play which subscriptions are active on the device's Play account and unlocks features accordingly. Manage or cancel a subscription in the Play Store under Subscriptions.</p>
+<p><strong>What we keep about a purchase.</strong> So that our server knows which plan your account is on, the app sends it the <strong>purchase token</strong> Google Play issued for your subscription: when you buy, when you restore purchases, and when you open the app if that subscription was last checked more than six hours earlier. Our server asks Google Play about the token and stores, against your account, the plan (Pro or Premium), the product, the token, the date the subscription runs until and when it was last checked — and nothing else about the purchase. The token is kept so that one purchase can belong to only one account; when you buy, the app also tags the purchase with your account id, a random identifier and not your email, for the same reason. Our server decides your plan, and the limits that go with it, from this record and not from the plan the app reports with each scan. The record is not removed when a subscription ends or is cancelled — it simply carries its expiry date — and is deleted when you delete your account (section 11).</p>
 
 <h2>9. Notifications</h2>
-<p>Reminders are optional and are generated on your device. Enabling them does not send anything to us.</p>
+<p>Reminders are optional and are generated on your device. Enabling them does not send anything to us. The Premium blood sugar and medicine reminders are described under &ldquo;Blood sugar log (Premium)&rdquo; in section 2.</p>
 
 <h2>10. Who we share data with</h2>
 <p>We do not sell personal data, and we do not share it for advertising. Data is shared only with the service providers needed to run the app:</p>
 <ul>
-  <li><strong>Supabase</strong> — accounts, database and photo storage.</li>
-  <li><strong>Google (Gemini)</strong> and <strong>Groq</strong> — food photo and text recognition, as described in section 4.</li>
-  <li><strong>Google Play</strong> — subscription billing.</li>
+  <li><strong>Supabase</strong> — accounts, database, photo storage, and the server functions that relay AI requests.</li>
+  <li><strong>Groq</strong>, <strong>Google</strong> (Gemini API), <strong>Cerebras</strong> and <strong>OpenRouter</strong>, and the model makers OpenRouter passes requests to (currently Google and OpenAI) — photo and text recognition, voice transcription (Groq, with Google as the fallback), meal plans and recipes, as described in section 4.</li>
+  <li><strong>USDA FoodData Central</strong>, <strong>Pexels</strong> and <strong>Unsplash</strong> — dish names, through our server, to look up nutrition or a stock photo.</li>
+  <li><strong>Open Food Facts</strong> — barcode numbers, and the words you type in Search food to find packaged products, from your phone.</li>
+  <li><strong>TheMealDB</strong> — recipe names, from your phone, to find a photo.</li>
+  <li><strong>Brevo</strong> — sends account emails.</li>
+  <li><strong>Google Play</strong> — subscription billing; our server also sends it a purchase token to confirm a subscription (section 8).</li>
   <li><strong>Google Sign-In</strong> — only if you choose it, to verify who you are.</li>
+  <li><strong>Expo</strong> — delivers app updates; your phone contacts Expo's servers to check for them.</li>
 </ul>
+<p>Some of these providers process data outside the country you live in, including in the United States.</p>
 <p>Separately from service providers: if you are in a family group, the other members of that group see the things listed in section 7. That is sharing with other people rather than with a company, it happens only because you joined a group, and it stops when you leave.</p>
 <p>We may also disclose data where required by law.</p>
 
 <h2>11. How long we keep it</h2>
-<p>Data linked to an account is kept until you delete it or delete your account. Deleting your account removes your stored data from our systems, including progress photos, your profile photo, your family messages, your shared daily numbers and your reactions. Backups may retain copies for up to 30 days before being overwritten. Pooled nutrition values described in section 6 are aggregated and cannot be traced back to you, so they are not removed.</p>
-<p><strong>Family messages are deleted 90 days after they are sent</strong>, regardless of whether the account still exists. Reports are kept for as long as we need them to act on the account they concern.</p>
+<p>Data linked to your account is kept until you delete it or delete your account. Deleting your account removes your account, your logged meals and their photos, weights and notes, progress photos, profile, goals, custom foods, your family profile photo, your family messages, your shared daily numbers, reactions you left and reactions on your day, reports you filed, people you blocked, your nutrition corrections, your AI usage counts, your crash reports and your subscription record (section 8). Backups may retain copies for up to 30 days before being overwritten.</p>
+<p>A <strong>voice clip</strong> is never kept: it is deleted from your phone once sent, and our server does not store it at all, so there is nothing of it to delete.</p>
+<p>A meal you delete stays in <strong>Recently deleted</strong> on your phone for 30 days so you can restore it. It leaves our server at the next sync, and only its random id is kept so your other devices know it was deleted. The photo file of a deleted meal or progress photo stays in your private storage folder until you delete your account.</p>
+<p><strong>Family messages are deleted 90 days after they are sent</strong>, regardless of whether the account still exists. Reports are kept for as long as we need them to act on the account they concern, including a copy of a message someone else reported. Crash reports are kept until you delete your account. The hashed device identifier is not stored against your account and is kept so the scan count cannot be reset by reinstalling.</p>
 
 <h2>12. Security</h2>
 <p>Traffic is encrypted in transit. Every database table uses row-level security so that your rows can only be read by your own account, or — for a family group — by the members of that group. Passwords are hashed by our authentication provider. No system is perfectly secure, and we cannot guarantee absolute security.</p>
-<p><strong>Crash reports.</strong> If the app crashes, it saves a report on your device and uploads it the next time you open the app, so the fault can be found and fixed. A report contains the error, where in the code it happened, and the app and Android versions. Personal values are stripped before it is sent: no meals, no photos, no messages, no email address.</p>
+<p><strong>Crash reports.</strong> If the app crashes, it saves a report on your device and uploads it the next time you open the app, so the fault can be found and fixed. A report contains the error, where in the code it happened, and the app and Android versions, and is linked to your account. Personal values are stripped before it is sent: no meals, no photos, no messages, no email address.</p>
+<p><strong>Report a problem.</strong> If you use Settings → Report a problem, your email app opens a message to us with the app and Android versions and recent error messages filled in. Nothing is sent until you send it.</p>
 
 <h2>13. Your rights and how to delete your data</h2>
 <ul>
   <li><strong>In the app:</strong> Settings → Account → Delete account &amp; data. This removes your account and its stored data permanently.</li>
   <li><strong>Without the app:</strong> see the <a href="delete-account.html">account deletion page</a>.</li>
-  <li><strong>Access or correction:</strong> email <a href="mailto:support@picmyplate.app">support@picmyplate.app</a> and we will provide a copy of your stored data or correct it.</li>
+  <li><strong>Access or correction:</strong> email <a href="mailto:support@picmyplate.app">support@picmyplate.app</a> and we will provide a copy of your stored data or correct it. Your blood sugar log is not part of that: it is only on your phone.</li>
+  <li><strong>Withdrawing consent:</strong> revoke Health Connect access, revoke the microphone permission, leave a family group, or delete your account.</li>
   <li><strong>Uninstalling</strong> removes everything held on the device.</li>
 </ul>
 <p>If you are in India, you have rights under the Digital Personal Data Protection Act, 2023. If you are in the EEA or UK, you have rights under the GDPR, including access, correction, erasure, portability and objection. Use the contact address above to exercise any of them.</p>
