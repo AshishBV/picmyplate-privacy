@@ -10,7 +10,7 @@
 <header>
   <p class="brand">PicMyPlate</p>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 8 October 2026</p>
+  <p class="updated">Last updated: 18 November 2026</p>
 </header>
 
 <main>
@@ -18,7 +18,7 @@
 <p>PicMyPlate is a calorie and nutrition tracker for Android. This policy explains exactly what the app collects, where it goes, and how to get rid of it. It is written to be read, not to be survived.</p>
 
 <div class="note">
-  <p><strong>The short version.</strong> You need an account to use PicMyPlate. What you log &mdash; meals and their photos, weights, progress photos, your profile and goals &mdash; is kept on your phone and copied to our server so it survives a lost phone. Photos you scan, voice clips you record, and some of what you type or have logged, are sent to an AI provider to be analysed; a voice clip is never kept. If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other &mdash; but never your weight. Health Connect data is read on your phone and never uploaded, except smart-scale weigh-ins, which join your weight log and are backed up with it. The Premium blood sugar log &mdash; readings, medicines and their reminders &mdash; stays on your phone and is never uploaded. We do not sell your data and we do not use it for advertising.</p>
+  <p><strong>The short version.</strong> You need an account to use PicMyPlate. What you log &mdash; meals and their photos, weights, progress photos, your profile and goals &mdash; is kept on your phone and copied to our server so it survives a lost phone. Photos you scan, voice clips you record, and some of what you type or have logged, are sent to an AI provider to be analysed; creating an account or signing in is agreeing to this, section 4 names the provider, and we never keep a voice clip (what OpenAI may keep is in section 4). If you join a family group, the other members can see your daily calorie total, your target and your streak, and you can message each other &mdash; but never your weight. Health Connect data is read on your phone and never uploaded, except smart-scale weigh-ins, which join your weight log and are backed up with it. The Premium blood sugar log &mdash; readings, medicines and their reminders &mdash; stays on your phone and is never uploaded. We do not sell your data and we do not use it for advertising.</p>
 </div>
 
 <h2>1. Who we are</h2>
@@ -95,7 +95,7 @@
     <td>Sent to our server with each scan.</td>
   </tr>
   <tr>
-    <td>Your subscription record: plan, product, purchase token, the subscription's status according to Google Play and the date it runs until</td>
+    <td>Your subscription record: plan, product, purchase token, the subscription's status according to Google Play, and the date it runs until</td>
     <td>Only if you subscribe, so our server knows which plan your account is on, and so one purchase belongs to only one account</td>
     <td>Our server, against your account, written from Google Play's own answer about the purchase. Deleted with your account. See section 8.</td>
   </tr>
@@ -177,12 +177,16 @@
 <p>Signing out removes your account's data from the phone. What was copied to our server stays there until you delete it or delete your account; water, fasting, hand-logged exercise, Quick-add favourites and the blood sugar log are never copied, so signing out removes them for good.</p>
 
 <h2>4. Food photos and AI</h2>
-<p>When you scan a meal, a nutrition label or the ingredients you have, the photograph is sent through our own server to an AI provider to be analysed. The request goes through our server so that our API keys are not exposed inside the app. We use several providers so the app keeps working when one is unavailable, and which one answers can change from request to request: <strong>Groq</strong>, <strong>Google</strong> (the Gemini API), <strong>Cerebras</strong> (text only) and <strong>OpenRouter</strong>, which passes the request on to the maker of the model it uses &mdash; currently Google or OpenAI. The result comes straight back to you. Our server does not keep a scanned photo once the answer is returned; if you log the meal, its photo is saved with it (section 2).</p>
+
+<h3>Signing in is agreeing</h3>
+<p>When you create an account or sign in, you agree to this policy and our terms, including that the features listed here &mdash; a photo scan, a label or kitchen scan, describing a meal, tapping the microphone, a meal plan or a recipe &mdash; send your content to the AI provider named below. You can still log food by searching or scanning a barcode. To stop AI processing altogether, delete your account in <strong>Settings &rarr; Account &rarr; Delete account &amp; data</strong>; nothing further is sent after that.</p>
+
+<p>When you scan a meal, a nutrition label or the ingredients you have, the photograph is sent through our own server to an AI provider to be analysed. The request goes through our server so that our API keys are not exposed inside the app. One company is involved: <strong>OpenAI</strong>, through its API. Our server asks one OpenAI model first and, when it is unavailable, a second OpenAI model; no other company receives what you send. The result comes straight back to you. Our server does not keep a scanned photo once the answer is returned; if you log the meal, its photo is saved with it (section 2).</p>
 <p>To make a meal scan more accurate, the request also carries your country (see "What the app does not collect") and up to six dishes you corrected before, with the calories you gave them.</p>
 
 <h3>Dish names, on the AI Insights screen</h3>
-<p>Photos are not the only thing that goes to an AI provider, and this is the other one. When you open <strong>AI Insights</strong> and have logged at least six meals, the app sends the <strong>names of dishes you have logged</strong> — up to fifty entries, each a dish name with the hour of day it was eaten — through our server to the same providers, and asks which meal of the day each one belongs to. It is what lets the screen say how many of your days have a breakfast, a lunch or a dinner recorded.</p>
-<p>What is sent is only the dish name and an hour, for example <em>"Paneer tikka"</em> at 20. <strong>No calories, no macros, no photographs, no weight, no dates, and nothing that identifies you</strong> — not your name, your email or your account id. The answer is held only in the app's memory, for up to a day, so opening the screen again does not send it again; if the app has been closed, or you have logged a new dish, the next visit sends it again.</p>
+<p>Photos are not the only thing that goes to an AI provider, and this is the other one. When you open <strong>AI Insights</strong> and have logged at least six meals, the app sends the <strong>names of dishes you have logged</strong> — up to fifty entries, each a dish name with the hour of day it was eaten — through our server to the same provider, and asks which meal of the day each one belongs to. It is what lets the screen say how many of your days have a breakfast, a lunch or a dinner recorded.</p>
+<p>What is sent is only the dish name and an hour, for example <em>"Paneer tikka"</em> at 20. <strong>No calories, no macros, no photographs, no weight, no dates, and nothing that identifies you</strong> — not your name, your email or your account id. The answer is kept on your phone for the rest of the day, even if the app is closed, so the list is sent at most once a day; a dish you log after that is included the next day. The kept answer holds only which meal of the day each entry was, and it is deleted when you sign out.</p>
 <p>The same caution as above applies, for the same reason: once a dish name reaches an AI provider it is governed by that provider's terms, not ours. If you would rather this did not happen, do not open the AI Insights screen — it is the only place that sends this list.</p>
 
 <h3>Text you type, meal plans and recipes</h3>
@@ -192,14 +196,14 @@
 
 <h3>Voice input and the microphone</h3>
 <p>In <strong>Describe Meal</strong> and <strong>Search food</strong> you can tap the microphone and say what you ate instead of typing it. The app asks for Android's <strong>microphone permission</strong> the first time, and uses the microphone only while you have asked it to listen: from your tap until you tap again, 15 seconds at most. It stops as soon as you leave the screen or switch to another app.</p>
-<p>The recording &mdash; a <strong>voice clip</strong> of a few seconds &mdash; is sent through our server to be <strong>transcribed</strong> into text by <strong>Groq</strong> (its Whisper speech model), or by <strong>Google</strong> (the Gemini API) if Groq is unavailable. The text comes back into the box, where you can change it before anything is estimated or logged. The clip is <strong>not stored</strong> by us &mdash; not on our server and not in our logs &mdash; and it is deleted from your phone once it has been sent. We keep only a daily count of voice requests, to enforce a fair-use limit.</p>
+<p>The recording &mdash; a <strong>voice clip</strong> of a few seconds &mdash; is sent through our server to be <strong>transcribed</strong> into text by <strong>OpenAI</strong>. The text comes back into the box, where you can change it before anything is estimated or logged. The clip is <strong>not stored</strong> by us &mdash; not on our server and not in our logs &mdash; and it is deleted from your phone once it has been sent. We keep only a daily count of voice requests, to enforce a fair-use limit.</p>
 <p>As with a photo, once a clip reaches the provider it is governed by that provider's terms, not ours, so say only what you ate. If you would rather not use voice, type instead, or refuse or revoke the microphone permission in your phone's settings; nothing else in the app uses the microphone.</p>
 
 <div class="note">
-  <p><strong>Please read this part.</strong> Once a photo or a voice clip reaches an AI provider it is governed by that provider's terms, not ours. Google states that content submitted through the free tier of its Gemini API may be used to improve its services, including review by human reviewers &mdash; and Gemini is also the fallback that transcribes a voice clip when Groq is unavailable. Do not photograph anything you would not want a third party to see — documents, faces, screens or other people — and photograph the food only. In a voice clip, say only what you ate.</p>
+  <p><strong>Please read this part.</strong> Once a photo, a voice clip or the text you type reaches an AI provider it is also governed by that provider's terms. We use <strong>OpenAI's API</strong>. Under OpenAI's terms for its API, what we send is not used to train or improve OpenAI's models. OpenAI keeps abuse-monitoring logs of what is sent to its models and of their answers for up to 30 days &mdash; longer only where the law requires it or where it is reasonably necessary to protect its services or anyone else from harm. For voice clips sent for transcription, OpenAI's published table lists no such log; another passage on the same page says those logs cover all use of its API, so we cannot promise either way. Every image is checked automatically for child sexual abuse material, and an image that check flags is kept for review. OpenAI offers zero data retention only to customers it approves, and PicMyPlate does not have it today. Until it does, the AI features are not available to anyone whose profile says they are under 18, or to an account whose age our server cannot read, such as one that has not signed in &mdash; searching, barcode scanning and everything else keep working. With each request we send OpenAI a code made from your account that cannot be turned back into it, so OpenAI can stop a single misused account without stopping the app. Even so, do not photograph anything you would not want a third party to see — documents, faces, screens or other people — and photograph the food only. In a voice clip, say only what you ate.</p>
 </div>
 
-<p>Provider terms: <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API</a> · <a href="https://groq.com/privacy-policy/">Groq</a> · <a href="https://www.cerebras.ai/privacy-policy">Cerebras</a> · <a href="https://openrouter.ai/privacy">OpenRouter</a>.</p>
+<p>Provider terms: <a href="https://openai.com/policies/services-agreement/">OpenAI Services Agreement</a> · <a href="https://openai.com/policies/usage-policies/">OpenAI usage policies</a> · <a href="https://developers.openai.com/api/docs/guides/your-data">how OpenAI handles API data</a>.</p>
 
 <h2>5. Health Connect</h2>
 <p>If you connect Health Connect (Settings → Exercise calories → Connect Health Connect, or when the app asks during setup) and allow access, the app reads the data below from Android Health Connect for the days you view. Your steps, exercise and sleep are shown back to you on the Progress screen, and if you also switch on "Add exercise calories", the calories you burned are added to that day's calorie budget on your own screen. Weigh-ins from a smart scale are added to your weight log. It reads seven things:</p>
@@ -258,12 +262,13 @@ sent to an AI provider.</p>
 <h3>Reporting and blocking</h3>
 <p>Hold someone else's message to report it, or to block the person who sent it.</p>
 <ul>
-  <li><strong>Reporting</strong> sends us a copy of the message, who sent it, and the reason you chose. We keep that copy even if the message is later deleted — otherwise anyone reported could simply delete the evidence. We review reports and may remove content or suspend accounts.</li>
+  <li><strong>Reporting</strong> sends us a copy of the message, who sent it, and the reason you chose. We keep that copy even if the message is later deleted — otherwise anyone reported could simply delete the evidence. We review reports <strong>within 24 hours</strong> and may remove content or suspend accounts.</li>
+  <li><strong>Filtering.</strong> Before a message is sent, a filter on your phone checks it against a list of slurs and strong abuse; a message that contains one is not sent, and the sender is told why. The filter is basic and does not replace reporting.</li>
   <li><strong>Blocking</strong> stops that person's messages from being sent to your device at all; it is enforced on our server, not hidden in the app. It is one-directional and private: they are not told, and they stay in the family group.</li>
 </ul>
 
 <h2>8. Subscriptions</h2>
-<p>Paid plans are billed by <strong>Google Play</strong>. We never see or handle your card, bank or payment details — Google does not share them with us. The app asks Google Play which subscriptions are active on the device's Play account and unlocks features accordingly. Manage or cancel a subscription in the Play Store under Subscriptions.</p>
+<p>Paid plans are billed by <strong>Google Play</strong>. We never see or handle your card, bank or payment details — Google does not share them with us. The app asks Google Play which subscriptions are active on the device's Play account and unlocks features accordingly. Manage or cancel a subscription in the Play Store under Subscriptions. Refunds are decided by Google Play.</p>
 <p><strong>What we keep about a purchase.</strong> So that our server knows which plan your account is on, the app sends it the <strong>purchase token</strong> Google Play issued for your subscription: when you buy, when you restore purchases, and when you open the app if that subscription was last checked more than six hours earlier. Our server asks Google Play about the token and stores, against your account, the plan (Pro or Premium), the product, the token, the subscription's status according to Google Play (for example active, on hold, cancelled or expired), the date the subscription runs until and when it was last checked — and nothing else about the purchase. Our server may also ask Google Play about the token again on its own, at most once a day, so that a refund or a cancellation takes effect even if you do not open the app; it sends Google Play only the token. The token is kept so that one purchase can belong to only one account; when you buy, the app also tags the purchase with your account id, a random identifier and not your email, for the same reason. Our server decides your plan, and the limits that go with it, from this record and not from the plan the app reports with each scan. The record is not removed when a subscription ends or is cancelled — it simply carries its expiry date — and is deleted when you delete your account (section 11).</p>
 
 <h2>9. Notifications</h2>
@@ -273,7 +278,7 @@ sent to an AI provider.</p>
 <p>We do not sell personal data, and we do not share it for advertising. Data is shared only with the service providers needed to run the app:</p>
 <ul>
   <li><strong>Supabase</strong> — accounts, database, photo storage, and the server functions that relay AI requests.</li>
-  <li><strong>Groq</strong>, <strong>Google</strong> (Gemini API), <strong>Cerebras</strong> and <strong>OpenRouter</strong>, and the model makers OpenRouter passes requests to (currently Google and OpenAI) — photo and text recognition, voice transcription (Groq, with Google as the fallback), meal plans and recipes, as described in section 4.</li>
+  <li><strong>OpenAI</strong> (its API) — photo and text recognition, voice transcription, meal plans and recipes, as described in section 4.</li>
   <li><strong>USDA FoodData Central</strong>, <strong>Pexels</strong> and <strong>Unsplash</strong> — dish names, through our server, to look up nutrition or a stock photo.</li>
   <li><strong>Open Food Facts</strong> — barcode numbers, and the words you type in Search food to find packaged products, from your phone.</li>
   <li><strong>TheMealDB</strong> — recipe names, from your phone, to find a photo.</li>
@@ -288,7 +293,7 @@ sent to an AI provider.</p>
 
 <h2>11. How long we keep it</h2>
 <p>Data linked to your account is kept until you delete it or delete your account. Deleting your account removes your account, your logged meals and their photos, weights and notes, progress photos, profile, goals, custom foods, your family profile photo, your family messages, your shared daily numbers, reactions you left and reactions on your day, reports you filed, people you blocked, your nutrition corrections, your AI usage counts, your crash reports and your subscription record (section 8). Backups may retain copies for up to 30 days before being overwritten.</p>
-<p>A <strong>voice clip</strong> is never kept: it is deleted from your phone once sent, and our server does not store it at all, so there is nothing of it to delete.</p>
+<p>We never keep a <strong>voice clip</strong>: it is deleted from your phone once sent, and our server does not store it at all, so there is nothing of it to delete. (What OpenAI may keep is in section 4.)</p>
 <p>A meal you delete stays in <strong>Recently deleted</strong> on your phone for 30 days so you can restore it. It leaves our server at the next sync, and only its random id is kept so your other devices know it was deleted. The photo file of a deleted meal or progress photo stays in your private storage folder until you delete your account.</p>
 <p><strong>Family messages are deleted 90 days after they are sent</strong>, regardless of whether the account still exists. Reports are kept for as long as we need them to act on the account they concern, including a copy of a message someone else reported. Crash reports are kept until you delete your account. The hashed device identifier is not stored against your account and is kept so the scan count cannot be reset by reinstalling.</p>
 
@@ -302,13 +307,13 @@ sent to an AI provider.</p>
   <li><strong>In the app:</strong> Settings → Account → Delete account &amp; data. This removes your account and its stored data permanently.</li>
   <li><strong>Without the app:</strong> see the <a href="delete-account.html">account deletion page</a>.</li>
   <li><strong>Access or correction:</strong> email <a href="mailto:support@picmyplate.app">support@picmyplate.app</a> and we will provide a copy of your stored data or correct it. Your blood sugar log is not part of that: it is only on your phone.</li>
-  <li><strong>Withdrawing consent:</strong> revoke Health Connect access, revoke the microphone permission, leave a family group, or delete your account.</li>
+  <li><strong>Withdrawing consent:</strong> delete your account (Settings &rarr; Account &rarr; Delete account &amp; data), which also stops AI processing; revoke Health Connect access, revoke the microphone permission, or leave a family group.</li>
   <li><strong>Uninstalling</strong> removes everything held on the device.</li>
 </ul>
 <p>If you are in India, you have rights under the Digital Personal Data Protection Act, 2023. If you are in the EEA or UK, you have rights under the GDPR, including access, correction, erasure, portability and objection. Use the contact address above to exercise any of them.</p>
 
 <h2>14. Children</h2>
-<p>PicMyPlate is not intended for children under 13, and is not directed at them. Calorie targets are calculated with formulas intended for adults. If you are between 13 and 17, use PicMyPlate only with your parent's or guardian's permission. If you believe a child has created an account, contact us and we will delete it.</p>
+<p>PicMyPlate is not intended for children under 13, and is not directed at them. Calorie targets are calculated with formulas intended for adults. If you are between 13 and 17, use PicMyPlate only with your parent's or guardian's permission; its AI features are not available to you for now (section 4). If you believe a child has created an account, contact us and we will delete it.</p>
 
 <h2>15. Changes to this policy</h2>
 <p>If this policy changes materially, the date at the top will change and the updated version will be published at this address. Continuing to use the app after a change means you accept the updated policy.</p>
